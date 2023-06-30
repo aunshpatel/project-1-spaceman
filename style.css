@@ -4,8 +4,8 @@
 }
 
 html{
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     background-image: url('images/space-bg.jpeg');
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -20,8 +20,8 @@ html{
     align-items:center;
     flex-direction: row;
 }
-#nameDiv{
-    margin-bottom: 20px;
+#nameDiv, #spacemanDiv, button{
+    margin-bottom: 10px;
 }
 
 #characterInput{
@@ -38,4 +38,12 @@ html{
 
 img{
    height: 250px;
+}
+button{
+    height: 50px;
+    width: 120px;
+    color: #fff;
+    font-size: 16px;
+    background-color: transparent;
+    border: 1px solid white;
 }
