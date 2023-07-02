@@ -88,8 +88,7 @@ var remainingLivesCounter = function () {
 
 // onInput Function
 check = function (input) {
-    var letterGuessed = input;
-    console.log('letters guessed:'+letterGuessed);
+    var letterGuessed='';
     //letterGuessedAlready.concat(input);
     characterInput.value = "";
     // this.setAttribute("class", "active");
@@ -105,6 +104,8 @@ check = function (input) {
     // }
 
     if(letterGuessedAlready.length == 0){
+        console.log('if condition input letter:'+input);
+        letterGuessed = input;
         letterGuessedAlready.splice(0,0,input);
         console.log('Empty letterGuessedAlready array');
     }
@@ -120,6 +121,9 @@ check = function (input) {
         if(letterGuessedAlready.includes(input)){
             alert('That letter "'+ input +'" has already been guessed. Please enter another letter.');
         } else{
+            console.log('else condition inside else condition input letter:'+input);
+            letterGuessed = input;
+            console.log('letters guessed:'+letterGuessed);
             letterGuessedAlready.push(input);
         }
         console.log('letterGuessedAlready:'+letterGuessedAlready);
@@ -128,7 +132,7 @@ check = function (input) {
     for (var i = 0; i < word.length; i++) {
         console.log('word: ' + word[i] + ' word.length: ' + word.length);
         answer = word;
-
+    
         if (word[i] === letterGuessed) {
             storedGuess[i].innerHTML = letterGuessed;
             // correctGuessCount += 1;
