@@ -10,12 +10,16 @@
     <h1 id="title">Welcome to The Spaceman Game</h1>
     <div id="inputDiv" class="contentDiv">
         <h3>Type a letter:</h3>&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="text" id="characterInput" name="characterInput">
+        <!-- <form action=""> -->
+            <!-- <input type="text" id="characterInput" name="characterInput" onkeydown=" inputOnchange()"/> -->
+            <input type="text" id="characterInput" name="characterInput" onkeyup="inputOnchange()"/>
+        <!-- </form> -->
     </div>
 
     <div id="categoryDiv" class="contentDiv">
         <h3>Category:</h3>&nbsp;&nbsp;
-        <h3 id="categoryName">Hollywood Movie</h3>
+        <!-- <h3 id="categoryName">Hollywood Movie</h3> -->
+        <h3 id="categoryName"></h3>
     </div>
 
     <div id="hintDiv" class="contentDiv">
@@ -24,19 +28,24 @@
     </div>
 
     <div id="nameDiv" class="contentDiv">
-        <span id="answer">_  _  _  _</span>
+        <!-- <span id="answer">_  _  _  _</span> -->
+        <span id="answer"></span>
     </div>
 
     <div id="chancesRemainingDiv" class="contentDiv">
-        <h3>Chances Remaining:</h3>&nbsp;&nbsp;
-        <h3 id="chancesRemaining">10</h3>
+        <!-- <h3></h3>&nbsp;&nbsp; -->
+        <h3 id="chancesRemaining"></h3>
+        <h2 id="onWrongGuessesAnswer"></h2>
     </div>
     <div id="spacemanDiv" class="contentDiv">
-        <img src="images/ufo-step0.jpeg" alt="Spaceman Images"></img>
+        <img id="spacemanImg" src="images/chancesRemaining-10.jpeg" alt="Spaceman Images"></img>
     </div>
-    
+
     <div id="buttonDiv" class="contentDiv">
         <button id="playAgain">Play Again</button>
     </div>
+
+
+    <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
