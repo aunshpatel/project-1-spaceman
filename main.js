@@ -7,7 +7,7 @@ var lives = 10;                          //count of lives
 var correctGuessCount;              // 'counter' in reference project This counts the number of correct guesses
 var storedGuess = [];               //Stored guesses
 var guess;                          // Geuss
-var space;                          // Number of spaces in word '-'
+var space;                          // Number of spaces in word ' '
 var correct;
 var answer;
 var letterGuessedAlready = [];
@@ -86,22 +86,45 @@ var remainingLivesCounter = function () {
     }
 }
 
-// OnClick Function
+// onInput Function
 check = function (input) {
     var letterGuessed = input;
     console.log('letters guessed:'+letterGuessed);
-    letterGuessedAlready.concat(input);
+    //letterGuessedAlready.concat(input);
     characterInput.value = "";
     // this.setAttribute("class", "active");
     // this.onclick = null;
+    // if(letterGuessedAlready.length == 0){
+    //     //letterGuessedAlready.splice(0,0,input);
+    //     letterGuessedAlready.concat(input);
+    //     console.log('Empty array');
+    // }
+    // else{
+    //     letterGuessedAlready.push(input);
+    //     console.log('letters guessed1:'+letterGuessedAlready);
+    // }
+
     if(letterGuessedAlready.length == 0){
         letterGuessedAlready.splice(0,0,input);
-        console.log('Empty array');
+        console.log('Empty letterGuessedAlready array');
     }
     else{
-        letterGuessedAlready.push(input);
-        console.log('letters guessed1:'+letterGuessedAlready);
+        // for(let i=0; i<letterGuessedAlready.length;i++){
+        //     if(input !== letterGuessedAlready[i]){
+        //         alert('That letter has already been guessed. Please enter another letter.')
+        //     }
+        //     else{
+        //         letterGuessedAlready.push(input);
+        //     }
+        // }
+        if(letterGuessedAlready.includes(input)){
+            alert('That letter "'+ input +'" has already been guessed. Please enter another letter.');
+        } else{
+            letterGuessedAlready.push(input);
+        }
+        console.log('letterGuessedAlready:'+letterGuessedAlready);
     }
+
     for (var i = 0; i < word.length; i++) {
         console.log('word: ' + word[i] + ' word.length: ' + word.length);
         answer = word;
@@ -112,9 +135,9 @@ check = function (input) {
             countCorrectGuesses+=1;
         }
     }
-    var j = (word.indexOf(letterGuessed));
-    console.log('j: ' + j);
-    if (j === -1) {
+    var indexOfLetterGuessed = (word.indexOf(letterGuessed));
+    console.log('indexOfLetterGuessed: ' + indexOfLetterGuessed);
+    if (indexOfLetterGuessed === -1) {
         lives -= 1;
         remainingLivesCounter();
         //animate();
