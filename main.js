@@ -69,11 +69,15 @@ var remainingLivesCounter = function () {
     if (lives < 1) {
         chancesRemaining.innerHTML= "Oh No! You lost! Better luck next time!";
         imageUpdater(0);
+        document.getElementById('answer').style.visibility = "hidden";
+        document.getElementById('answer').style.width = 0;
+        document.getElementById('answer').style.height = 0;
         console.log('The answer is:'+answer);
         document.getElementById("onWrongGuessesAnswer").innerHTML = 'The answer is: '+answer;
     }
     else{
         //chancesRemaining.innerHTML = lives;
+        document.getElementById('answer').style.visibility = "visible";
         imageUpdater(lives);
     }
 
@@ -82,6 +86,7 @@ var remainingLivesCounter = function () {
         if ((countCorrectGuesses + space) === storedGuess.length) {
             // showLives.innerHTML = "You Win!";
             chancesRemaining.innerHTML = "Congratulations! You Win!"
+            document.getElementById('answer').style.visibility = "visible";
         }
     }
 }
