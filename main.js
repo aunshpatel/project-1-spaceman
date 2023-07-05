@@ -21,7 +21,12 @@ var spacemanImage = document.getElementById('spacemanImg');
 function inputOnchange() {
     let characterInput = document.getElementById("characterInput").value.toUpperCase();
     console.log('characterInput:'+characterInput);
-    check(characterInput);
+    if(characterInput === " ") {
+        alert("Spacebar is not considered as a character. Please guess some other letter.");
+    }
+    else {
+        check(characterInput);
+    }
 }
 
 //Category selector
@@ -198,6 +203,7 @@ gameInit();
 document.getElementById('playAgain').onclick = function () {
    // correct.parentNode.removeChild(correct);
     createUL.parentNode.removeChild(createUL);
+    letterGuessedAlready = [];
     // showClue.innerHTML = "";
     // context.clearRect(0, 0, 400, 400);
     gameInit();
