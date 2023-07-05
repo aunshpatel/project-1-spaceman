@@ -52,7 +52,7 @@ result = function () {
         guess.setAttribute('class', 'guess');
         if (word[i] === " ") {
             guess.innerHTML = " ";
-            space = 1;
+            space += 1;
         } else {
             guess.innerHTML = "_";
         }
