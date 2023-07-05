@@ -39,7 +39,6 @@ var categorySelector = function () {
     }
 }
 
-
 // Create ul for displaying name
 result = function () {
     answer = document.getElementById('answer');
