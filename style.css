@@ -14,16 +14,6 @@ body {
     text-align: center;
 }
 
-/* html{
-    height: 100%;
-    width: 100%;
-    background-image: url('images/space-bg.jpeg');
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    text-align: center;
-} */
 .contentDiv {
     display: flex;
     text-align: justify;
