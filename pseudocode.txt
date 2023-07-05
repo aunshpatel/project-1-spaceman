@@ -1,0 +1,101 @@
+Following is the pseudocode for the project:
+
+On project initialization:
+1. Display category name
+2. Display hint
+3. Display dashes to represent the place where correct letters will be displayed(1 dash for each letter fo the word)
+
+
+
+
+1. If letter entered is correct and not guessed before:
+    a) Display the alphabet on all places it occurs
+    b) Update letters guessed array
+    c) Update the correct guess count by 1
+
+2) If alphabet entered is incorrect:
+    a) Reduce the lives remaining by 1
+    b) Update the image of the ufo drawing
+
+3) If letter has already been guessed:
+    a) Show alert box to inform the player for the same.
+    b) No other change occurs
+
+
+1) gameInit function:
+    This function initializes the js.
+    Constant values are added inside arrays of categories, and hints.
+    Spaces in the word, remaining lives, countCorrectGuesses, and storedGuess values are set.
+    chosenCategory, category, result, remainingLivesCounter, categorySelector, imageUpdater functions are called.
+
+2) result function:
+    answer value is referred to the html element with 'answer' id
+    createUL creates the UL to display "_" where the correctly guessed letters will be displayed
+    
+    for length of variable 'word':
+        set an attribute 'ID' to createUL
+        create an 'li' element
+        if there is empty space between two letters of a word:
+            add spaces by 1
+            display the empty space
+        else:
+            display underscore('_') to show that the letter has not been guessed yet
+        
+        push value of 'guess' variable inside storedGuess list
+        append the child into element with 'answer' id
+        create a new UL item
+
+3) remainingLivesCounter function:
+    set value of chancesRemaining
+    if lives < 1:
+        update value of chancesRemaining to show that the user has lost
+        update the image to show the ufo taking away the man
+        hide the ul list where the correct guesses would have been displayed and replace it with the correct answer
+    else:
+        keep the answer string hidden and call image updater function
+
+    for the length of value stored in variable word:
+        if spaces + correct guess letters length = length of data stored in storedGuess:
+            display 'You win' message
+
+4) categorySelector function:
+    if category at 0 index is called:
+        display value of categoryName as sports
+    else if category at 1 index is called:
+        display value of categoryName as Hollywood Movies
+    else if category at 2 index is called:
+        display value of categoryName as Cities Across the world
+
+5) imageUpdater function:
+    display image according to the number of lives remaining
+
+6) When user enters a letter:
+    if guess is " " (user presses spacebar):
+        alert user that spacebar is not needed to be used
+
+    else:
+        call the "check" function to check the letter
+
+7) check function:
+    if letterGuessedAlready list is empty:
+        add the letter to the letterGuessedAlready list
+        add the letter to letterGuessed variable
+    else if list is not empty:
+        if the entered letter is already in the list:
+            show a message that letter is already guessed before
+        else:
+            add the letter to the letterGuessedAlready list
+            add the letter to letterGuessed variable
+    
+    for the length of value stored in variable word:
+        set variable answer's value to value of 'word' variable
+        if letter is at a specific index of the word:
+            display the letter at every position it appears
+            increase the letter count by 1
+
+    set indexOfLetterGuessed to the index of where the letter was guessed
+    if indexOfLetterGuessed = -1(wrong guess):
+        decrease the chances remaining by 1
+        call the remainingLivesCounter function
+    else:
+        call the remainingLivesCounter function
