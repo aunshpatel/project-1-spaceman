@@ -17,18 +17,18 @@ var chancesRemaining = document.getElementById("chancesRemaining");
 var showClue = document.getElementById('hint');
 var spacemanImage = document.getElementById('spacemanImg');
 
-
+//Onchange function of input field
 function inputOnchange() {
     let characterInput = document.getElementById("characterInput").value.toUpperCase();
     if(characterInput === " ") {
-        alert("Spacebar is not considered as a character. Please guess some other letter.");
+        alert("Space is not considered as a character. Please guess some other letter.");
     }
     else {
         check(characterInput);
     }
 }
 
-
+//Category selector, it is selected automatically
 var categorySelector = function () {
     if (chosenCategory == categories[0]) {
         categoryName.innerHTML = "Sports";
@@ -62,6 +62,7 @@ result = function () {
     }
 }
 
+//Image which is updated on the screen on wrong guess is called below
 imageUpdater = function (imageNumber) {
     spacemanImage.src = "images/chancesRemaining-"+imageNumber+".jpeg";
 }
@@ -160,7 +161,7 @@ gameInit = function () {
 gameInit();
 
 
-
+//Play again button onclick
 document.getElementById('playAgain').onclick = function () {
     createUL.parentNode.removeChild(createUL);
     letterGuessedAlready = [];
