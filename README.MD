@@ -20,4 +20,3 @@ Screenshots of the game:
 
 4) When user wins the game:
 ![Game Won](/images-for-readme/game-won.png/?raw=true)
-
