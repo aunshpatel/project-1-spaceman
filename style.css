@@ -7,22 +7,7 @@ html{
     width: 100%;
     background: url('images/space-bg.jpeg') center center no-repeat fixed;
     text-align: center;
-    /* background-image: url('images/space-bg.jpeg');
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    text-align: center; */
 }
-
-/* body {
-    background-image: url('images/space-bg.jpeg');
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    text-align: center;
-} */
 
 .contentDiv {
     display: flex;
@@ -33,10 +18,14 @@ html{
 }
 
 #nameDiv,
-#spacemanDiv,
-button {
+#spacemanDiv{
     margin-bottom: 10px;
 }
+
+button{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}   
 
 #characterInput {
     height: 20px;
@@ -107,5 +96,5 @@ button {
 @media screen and (max-width:1023.9px) {
     #title{
         margin-top: 20px;
-    }
+    } 
 }
