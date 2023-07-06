@@ -1,14 +1,11 @@
-var inputLetter;
 var imageNumber;
 var chosenCategory;
 var categories;
 var countCorrectGuesses;
 var lives = 10;
-var correctGuessCount;
 var storedGuess = [];
 var guess;
 var space;
-var correct;
 var answer;
 var letterGuessedAlready = [];
 
