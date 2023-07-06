@@ -139,7 +139,7 @@ gameInit = function () {
     word = word.replace(/\s/g, " ");
 
     hints = [
-        ["A game played using bat, ball and stumps.", "A game where goal is scored using stick, and ball.", "A game where 7 points are given when a player reaches the end line.", "A game where goal is scored by kicking ball into the net.", "A game involving 2 or 4 players hitting a ball with racket across the net.", "A game where point is scored by making homerun.", "The game is won when you checkmate the opponent."],
+        ["A game played using bat, ball and stumps.", "A game where goal is scored using stick and ball and each team has 11 players.", "A game where 7 points are given when a player reaches the end line.", "A game where goal is scored by kicking ball into the net.", "A game involving 2 or 4 players hitting a ball with racket across the net.", "A game where point is scored by making homerun.", "The game is won when you checkmate the opponent."],
         ["First full movie of God of Thunder", "Complete the phrase: I am -----", "Movie based on life of Alan Turing", "Movie series based on magic world. Main character:- The boy who lived.", "Famous Dialogue:- I'm going to make an offer he can't refuse"],
         ["Birth place of Leo Messi", "The city in USA also known as Big Apple", "Capital of Czech Republic", "City of Taj Mahal", "City in England with teams named 'City' and 'United'"]
     ];
