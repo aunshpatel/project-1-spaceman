@@ -1,8 +1,11 @@
 1) gameInit function:
-    This function initializes the js.
-    Constant values are added inside arrays of categories, and hints.
-    Spaces in the word, remaining lives, countCorrectGuesses, and storedGuess values are set.
-    chosenCategory, category, result, remainingLivesCounter, categorySelector, imageUpdater functions are called.
+    Initializing the following values:
+    'Categories', and 'Hints' arrays.
+    chosenCategory and word variables are allocated random numbers based on the length of categories array, and chosenCategory variable respectively (by using math.floor and math.random)
+    Remaining lives, countCorrectGuesses, and storedGuess variables.
+
+    Initializing the following functions by calling them:
+    chosenCategory, category, result, remainingLivesCounter, categorySelector, imageUpdater.
 
 2) result function:
     answer value is referred to the html element with 'answer' id
