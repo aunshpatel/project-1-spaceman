@@ -2,17 +2,27 @@
     font-family: Arial, Helvetica, sans-serif;
     color: #fff;
 }
-
-body {
+html{
     height: 100%;
     width: 100%;
+    background: url('images/space-bg.jpeg') center center no-repeat fixed;
+    text-align: center;
+    /* background-image: url('images/space-bg.jpeg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    text-align: center; */
+}
+
+/* body {
     background-image: url('images/space-bg.jpeg');
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     text-align: center;
-}
+} */
 
 .contentDiv {
     display: flex;
@@ -74,4 +84,28 @@ button {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+@media screen and (max-width:374.9px){
+    #hint{
+        width: 200px;
+    }
+}
+
+@media screen and (min-width:375px) and (max-width:768px){
+    #hint{
+        width: 250px;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    #title{
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width:1023.9px) {
+    #title{
+        margin-top: 20px;
+    }
 }
