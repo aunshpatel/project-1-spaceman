@@ -95,6 +95,7 @@ check = function (input) {
     if(letterGuessedAlready.length == 0){
         letterGuessed = input;
         letterGuessedAlready.splice(0,0,input);
+        document.getElementById('lettersGuessed').innerHTML = "Letters already guessed: "+letterGuessedAlready;
     }
     else{
         if(letterGuessedAlready.includes(input)){
@@ -102,6 +103,7 @@ check = function (input) {
         } else {
             letterGuessed = input;
             letterGuessedAlready.push(input);
+            document.getElementById('lettersGuessed').innerHTML = "Letters already guessed: "+ letterGuessedAlready;
         }
     }
 
@@ -144,6 +146,7 @@ gameInit = function () {
     var catagoryIndex = categories.indexOf(chosenCategory);
     var hintIndex = chosenCategory.indexOf(word);
     showClue.innerHTML = hints[catagoryIndex][hintIndex];
+    document.getElementById('lettersGuessed').innerHTML = "No letters guessed yet!"
     storedGuess = [];
     lives = 10;
     space = 0;
