@@ -70,7 +70,7 @@ imageUpdater = function (imageNumber) {
 var remainingLivesCounter = function () {
     chancesRemaining.innerHTML = "Chances Remaining: "+lives;
     if (lives < 1) {
-        chancesRemaining.innerHTML= "Oh No! You lost! Better luck next time!";
+        chancesRemaining.innerHTML= "Oh no, you lost! Better luck next time!";
         imageUpdater(0);
         document.getElementById('answer').style.visibility = "hidden";
         document.getElementById('answer').style.width = 0;
