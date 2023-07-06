@@ -40,7 +40,7 @@ button{
 }
 
 img {
-    height: 240px;
+    height: 300px;
 }
 
 button {
@@ -85,6 +85,9 @@ button {
     #hint{
         width: 250px;
     }
+    img {
+        height: 240px;
+    }
 }
 
 @media screen and (min-width:1024px) {
@@ -97,4 +100,7 @@ button {
     #title{
         margin-top: 20px;
     } 
+    img {
+        height: 240px;
+    }
 }
