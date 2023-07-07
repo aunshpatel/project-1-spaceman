@@ -13,6 +13,7 @@ var categoryName = document.getElementById("categoryName");
 var chancesRemaining = document.getElementById("chancesRemaining");
 var showClue = document.getElementById('hint');
 var spacemanImage = document.getElementById('spacemanImg');
+document.getElementById("characterInput").disabled = false;
 
 //Onchange function of input field
 function inputOnchange() {
@@ -76,6 +77,7 @@ var remainingLivesCounter = function () {
         document.getElementById('onWrongGuessesAnswer').style.visibility = "visible";
         document.getElementById('onWrongGuessesAnswer').style.width = "initial";
         document.getElementById('onWrongGuessesAnswer').style.height = "initial";
+        document.getElementById("characterInput").disabled = true;
     }
     else{
         document.getElementById('answer').style.visibility = "visible";
@@ -86,6 +88,7 @@ var remainingLivesCounter = function () {
         if ((countCorrectGuesses + space) === storedGuess.length) {
             chancesRemaining.innerHTML = "Congratulations! You Win!"
             document.getElementById('answer').style.visibility = "visible";
+            document.getElementById("characterInput").disabled = true;
         }
     }
 }
@@ -150,6 +153,7 @@ gameInit = function () {
     var hintIndex = chosenCategory.indexOf(word);
     showClue.innerHTML = hints[catagoryIndex][hintIndex];
     document.getElementById('lettersGuessed').innerHTML = "No letters guessed yet!"
+    document.getElementById("characterInput").disabled = false;
     storedGuess = [];
     lives = 10;
     space = 0;
