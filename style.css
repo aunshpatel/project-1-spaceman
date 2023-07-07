@@ -84,6 +84,12 @@ button {
     #hint{
         width: 200px;
     }
+    guess{
+        font-size: 16px;
+    }
+    #my-word li{
+        padding: 0 5px;
+    }
 }
 
 @media screen and (min-width:375px) and (max-width:768px){
