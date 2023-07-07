@@ -9,6 +9,11 @@ html{
     text-align: center;
 }
 
+body{
+    height: 100%;
+    width: 100%;
+}
+
 .contentDiv {
     display: flex;
     text-align: justify;
