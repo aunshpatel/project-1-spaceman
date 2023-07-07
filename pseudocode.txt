@@ -60,12 +60,14 @@
     if letterGuessedAlready list is empty:
         add the letter to the letterGuessedAlready list
         add the letter to letterGuessed variable
+        the list of letters will be updated and displayed under remaining chances
     else if list is not empty:
         if the entered letter is already in the list:
             show a message that letter is already guessed before
         else:
             add the letter to the letterGuessedAlready list
             add the letter to letterGuessed variable
+            the list of letters will be updated and displayed under remaining chances
     
     for the length of value stored in variable word:
         set variable answer's value to value of 'word' variable
