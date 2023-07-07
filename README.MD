@@ -30,7 +30,9 @@ Spaceman is an alternative version of hangman. The reason for creating this game
 # Getting Started
 
 Project planning: https://trello.com/invite/b/F5wq2ncV/ATTI073e1faebea22a5212af63d311b6b8ff92D85214/spaceman
-Deployment URL: None as of now, will be added later
+
+
+Deployment URL: https://aunshpatel.github.io/project-1-spaceman/
 
 # Next Steps
 
