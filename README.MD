@@ -9,7 +9,7 @@ Spaceman is an alternative version of hangman. The reason for creating this game
 2) When a guess is correct:
 ![Correct Guess](/images-for-readme/correct-guess.png/?raw=true)
 
-3) When a letter is guessed more than 1 time:
+3) When a user types the same letter more than 1 time:
 ![Wrong Guess](/images-for-readme/letter-already-guessed.png/?raw=true)
 
 4) When a guess is wrong:
