@@ -73,6 +73,8 @@ var remainingLivesCounter = function () {
         document.getElementById('answer').style.width = 0;
         document.getElementById('answer').style.height = 0;
         document.getElementById("onWrongGuessesAnswer").innerHTML = 'The answer is: '+answer;
+        document.getElementById('onWrongGuessesAnswer').style.width = "initial";
+        document.getElementById('onWrongGuessesAnswer').style.height = "initial";
     }
     else{
         document.getElementById('answer').style.visibility = "visible";
@@ -163,6 +165,11 @@ gameInit();
 //Play again button onclick
 document.getElementById('playAgain').onclick = function () {
     createUL.parentNode.removeChild(createUL);
+    document.getElementById('answer').style.width = "initial";
+    document.getElementById('answer').style.height = "initial";
+    document.getElementById('onWrongGuessesAnswer').style.visibility = "hidden";
+    document.getElementById('onWrongGuessesAnswer').style.width = 0;
+    document.getElementById('onWrongGuessesAnswer').style.height = 0;
     letterGuessedAlready = [];
     gameInit();
 }
