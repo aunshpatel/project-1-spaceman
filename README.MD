@@ -37,3 +37,4 @@ Deployment URL: https://aunshpatel.github.io/project-1-spaceman/
 # Next Steps
 
 - Adding an option to the game where the player can select the category.
+- Adding new categories.
